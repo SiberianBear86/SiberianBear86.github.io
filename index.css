@@ -1,19 +1,28 @@
 main {
   padding: 100px;
-  box-sizing: border-box;
   background: antiquewhite;
   border: 1px solid darkgray;
 }
+
 .cat-img img {
   width: 300px;
   height: 200px;
-  border-radius: 16px 16px 0px 0px;
+  border-radius: 16px 16px 0 0;
 }
 
-[href] {
+.cat-name a {
   text-decoration: none;
   font-size: 24px;
 }
+
+.cat-name a:visited {
+  color: orange;
+}
+
+.cat-name a:hover {
+  color: red;
+}
+
 .cat {
   border-radius: 16px;
   width: 300px;
@@ -23,40 +32,62 @@ main {
   background: white;
 }
 
-.cat:hover {
-  transition: 1s;
-  transform: scale(1.3);
-}
 .cat-name,
 .cat-description {
   display: block;
   padding: 10px 15px;
   font-size: 20px;
 }
+
+.cat-name {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .cat-full-description {
   display: none;
   margin-left: 15px;
   font-size: 20px;
 }
+
+.cat:hover {
+  border-color: red;
+  transform: scale(1.3);
+}
+
+.cat-img:hover {
+  transition: 1s;
+  transform: scale(1.5);
+}
+
+.cat-description:hover,
+.cat-full-description:hover {
+  color: red;
+}
+
 .direction-input {
   display: none;
 }
+
 .direction-button {
   display: inline-block;
   cursor: pointer;
   transform-origin: 50%;
   transform: rotate(0deg);
 }
+
 .direction-part {
   border: 3px solid black;
   margin-right: 5px;
   margin-top: 3px;
   background: black;
 }
+
 label[for='direction'] {
   padding-left: 15px;
   display: inline-block;
 }
+
 .direction-input:checked + label[for='direction'] .direction-button {
   transform-origin: 50%;
   transform: rotate(90deg);
@@ -65,16 +96,14 @@ label[for='direction'] {
 .direction-input:checked ~ .cats .cat {
   display: block;
   width: 500px;
-  margin: 0 auto;
-}
-.direction-input:checked ~ .cats .cat {
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 .direction-input:checked ~ .cats .cat .cat-img img {
-  margin-left: 20%;
+  margin: 5% 20%;
   border-radius: 0;
 }
+
 .direction-input:checked ~ .cats .cat .cat-full-description {
   display: block;
 }
