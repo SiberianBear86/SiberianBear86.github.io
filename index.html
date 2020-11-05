@@ -1,204 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>02-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-  <main>
-    <input type="checkbox" id="direction" class="direction-input">
-    <label for="direction">
-      <span class="direction-button">
-        <span class="direction-part"></span>
-        <span class="direction-part"></span>
-        <span class="direction-part"></span>
-      </span>
-    </label>
+<head>
+  <meta charset="utf-8">
+  <title>02-about-cats</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header>
+  <div class="header-name">Мурмаркет</div>
+</header>
+<main>
+  <div class="slider">
+    <input checked type="radio" name="slider-button" id="cat1" class="cat1">
+    <input type="radio" name="slider-button" id="cat2" class="cat2">
+    <input type="radio" name="slider-button" id="cat3" class="cat3">
+    <input type="radio" name="slider-button" id="cat4" class="cat4">
+    <input type="radio" name="slider-button" id="cat5" class="cat5">
     <div class="cats">
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://img3.goodfon.ru/original/4500x3600/4/cf/britanskaya-korotkosherstnaya-5636.jpg" title="Первый кот" alt="Фотография первого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Шотландец</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 1 год<br>Порода: британская<br>
-          Болезни: нет<br><br>Статус: ищет хозяина
-          </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Спокойный<br> Возраст 1 год<br>Красивый, умный и неприхотлив к еде</p>
-          </div>
-        </div>
+      <div class="first-cat">
+        <a href="#modal1"><div class="cat-name"><p>Лавашик</p></div></a>
+        <label for="cat1">
+          <img class="cat-image" src="https://image1.thematicnews.com/uploads/topics/preview/00/13/53/48/ec74ae8bf3.jpg" alt="Фотография первого кота">
+        </label>
       </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://cdn.photosight.ru/img/1/cc3/6254015_large.jpg" title="Второй кот" alt="Фотография второго кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Барсик</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 6 месяцев<br>Порода: нет<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Спокойный<br>Возраст 6 месяцев<br>Очень любит наряжаться и фотографироваться</p>
-          </div>
-        </div>
+      <div class="second-cat">
+        <a href="#modal2"><div class="cat-name"><p>Лизун</p></div></a>
+        <label for="cat2">
+          <img class="cat-image" src="https://avatars.mds.yandex.net/get-zen_doc/1900011/pub_5e247044fc69ab00adcdb2d1_5e24708706cc4600ae7efcf2/scale_1200" alt="Фотография второго кота">
+        </label>
       </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://cs8.pikabu.ru/post_img/2016/02/24/8/og_og_1456317491276479275.jpg" title="Третий кот" alt="Фотография третьего кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Пушок</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 4 месяца<br>Порода: нет<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Ласковый<br>Возраст 4 месяца<br>Очень любит играть на свежем воздухе, особенно зимой.
-            Впадает в печаль, когда приходит время идти домой.</p>
-          </div>
-        </div>
+      <div class="third-cat">
+        <a href="#modal3"><div class="cat-name"><p>Томас</p></div></a>
+        <label for="cat3">
+          <img class="cat-image" src="https://cdn.pixabay.com/photo/2019/03/29/10/09/cat-4088887_1280.jpg" alt="Фотография третьего кота">
+        </label>
       </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://murkoshka.ru/wp-content/uploads/mab-3.jpg" title="Четвертый кот" alt="Фотография четвертого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Тай</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 3 месяца<br>Порода: Тайская<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Дружелюбный<br>Возраст ~3 месяцев<br>Домосед. Обычно ищет самое тёплое место в квартире и отдыхает там.</p>
-          </div>
-        </div>
+      <div class="fourth-cat">
+        <a href="#modal4"><div class="cat-name"><p>Мамин-Сибиряк</p></div></a>
+        <label for="cat4">
+          <img class="cat-image" src="https://i.pinimg.com/736x/e5/0f/5e/e50f5eda41bc0603f571f091558dc10c.jpg" alt="Фотография четвертого кота">
+        </label>
       </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://avatars.mds.yandex.net/get-districts/1767466/2a0000016b8ed3da0c9685684ed2320f4b86/optimize" title="Пятый кот" alt="Фотография пятого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Улыбака</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 9 месяцев<br>Порода: нет<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Позитивный и азарной<br>Возраст 9 месяцев.<br>Очень весёлый и энергичный котик. Любит играть где угодно, с кем угодно и когда угодно</p>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://i.pinimg.com/736x/e5/0f/5e/e50f5eda41bc0603f571f091558dc10c.jpg" title="Шестой кот" alt="Фотография шестого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Мамин-Сибиряк</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 1.5 года<br>Порода: Сибирская<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Трусливая<br>Возраст около полутора лет<br>Боится громких шумов. Очень впечатлительная</p>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://cdn.pixabay.com/photo/2019/03/29/10/09/cat-4088887_1280.jpg" title="Седьмой кот" alt="Фотография седьмого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Томас</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 2 года<br>Порода: охос азулес<br>
-              Болезни: нет<br><br>Статус: Ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Серьёзный<br>Возраст около двух лет<br>Тихий и нелюдимый. Любит поесть</p>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://porosenka.net/uploads/3/1/313cf345957c54bf0f29a869ad058304.jpg" title="Восьмой кот" alt="Фотография восьмой кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Ра</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 2 года<br>Порода: Сфинкс<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Агрессивный<br>Возраст 2 года<br>Очень не любит когда к нему лезут</p>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://avatars.mds.yandex.net/get-zen_doc/1900011/pub_5e247044fc69ab00adcdb2d1_5e24708706cc4600ae7efcf2/scale_1200" title="Девятый кот" alt="Фотография девятого кота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Лизун</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 8 месяцев<br>Порода: нет<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Добрая и жинерадостная<br>Возраст почти 8 месяцев<br>Любит когда её ласкают и носят на руках</p>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <div class="cat-img">
-          <img src="https://image1.thematicnews.com/uploads/topics/preview/00/13/53/48/ec74ae8bf3.jpg" title="Десятый кот" alt="Фотография десятогокота">
-        </div>
-        <div class="cat-info">
-          <div class="cat-name">
-            <a href="https://yandex.ru/" target="_blank">Лавашик</a>
-          </div>
-          <div class="cat-description">
-            <p>Возраст: 4 месяца<br>Порода: нет<br>
-              Болезни: нет<br><br>Статус: ищет хозяина
-            </p>
-          </div>
-          <div class="cat-full-description">
-            <p>Стеснительная<br>Возраст 4 месяца.<br>Очень долго привыкает к людям.
-              Когда видит незнакомых людей, то предпочетает спрятаться под одеялом.</p>
-          </div>
-          </div>
+      <div class="fifth-cat">
+        <a href="#modal5"><div class="cat-name"><p>Улыбака</p></div></a>
+        <label for="cat5">
+          <img class="cat-image" src="https://avatars.mds.yandex.net/get-districts/1767466/2a0000016b8ed3da0c9685684ed2320f4b86/optimize" alt="Фотография пятого кота">
+        </label>
       </div>
     </div>
-  </main>
-  </body>
+    <div class="active">
+      <label for="cat1"></label>
+      <label for="cat2"></label>
+      <label for="cat3"></label>
+      <label for="cat4"></label>
+      <label for="cat5"></label>
+    </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <img class="modal-image" src="https://image1.thematicnews.com/uploads/topics/preview/00/13/53/48/ec74ae8bf3.jpg" alt="Фотография первого кота">
+      <div class="modal-description">
+        <p class="modal-name">Лавашик</p>
+        <p>Стеснительная<br><br>Возраст 4 месяца<br><br>Очень долго привыкает к людям.
+          Когда видит незнакомых людей, то предпочетает спрятаться под одеялом</p>
+      </div>
+      <a href="#close" class="close">X</a>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <img class="modal-image" src="https://avatars.mds.yandex.net/get-zen_doc/1900011/pub_5e247044fc69ab00adcdb2d1_5e24708706cc4600ae7efcf2/scale_1200" alt="Фотография второго кота">
+      <div class="modal-description">
+        <p class="modal-name">Улыбака</p>
+        <p>Добрая и жинерадостная<br><br>Возраст почти 8 месяцев<br><br>Любит когда её ласкают и носят на руках</p>
+      </div>
+      <a href="#close" class="close">X</a>
+    </div>
+  </div>
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <img class="modal-image" src="https://cdn.pixabay.com/photo/2019/03/29/10/09/cat-4088887_1280.jpg" alt="Фотография третьего кота">
+      <div class="modal-description">
+        <p class="modal-name">Лавашик</p>
+        <p>Серьёзный<br><br>Возраст около двух лет<br><br>Тихий и нелюдимый. Любит поесть</p>
+      </div>
+      <a href="#close" class="close">X</a>
+    </div>
+  </div>
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <img class="modal-image" src="https://i.pinimg.com/736x/e5/0f/5e/e50f5eda41bc0603f571f091558dc10c.jpg" alt="Фотография четвёртого кота">
+      <div class="modal-description">
+        <p class="modal-name">Мамин-Сибиряк</p>
+        <p>Трусливая<br><br>Возраст около полутора лет<br><br>Боится громких шумов. Очень впечатлительная</p>
+      </div>
+      <a href="#close" class="close">X</a>
+    </div>
+  </div>
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <img class="modal-image" src="https://avatars.mds.yandex.net/get-districts/1767466/2a0000016b8ed3da0c9685684ed2320f4b86/optimize" alt="Фотография пятого кота">
+      <div class="modal-description">
+        <p class="modal-name">Улыбака</p>
+        <p>Позитивный и азарной<br><br>Возраст 9 месяцев.<br><br>Очень весёлый и энергичный котик. Любит играть где угодно, с кем угодно и когда угодно</p>
+      </div>
+      <a href="#close" class="close">X</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-info">
+    <p class="mail-address">Напишите нам:<br><a href="https://yandex.ru/" class="email" target="_blank">&#128231;cats@babuli.ru</a>
+      <br><a href="https://yandex.ru/" class="email" target="_blank">&#128231;vnuchek@babuli.ru</a></p>
+    <p class="site-info">&copy; 2018 OOO &laquo;<a href="https://yandex.ru/" class="email" target="_blank">Бабушкины котятки</a>&raquo;</p>
+  </div>
+</footer>
+</body>
 </html>
