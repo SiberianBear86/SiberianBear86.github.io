@@ -1,113 +1,213 @@
+header {
+  width: 100%;
+  background: whitesmoke;
+  position: fixed;
+  z-index: 4;
+}
+
 main {
-  padding: 100px;
+  height: 700px;
+}
+
+footer {
+  position: relative;
+  font: 14px 'Arial';
+}
+
+.header-name {
+  font: 32px 'PT SansNarrow';
+  text-align: center;
+}
+
+.header-name:first-letter {
+  color: red;
+}
+
+.email {
+  color: #4c4cd8;
+}
+
+.mail-address {
+  float: left;
+}
+
+.site-info {
+  margin-top: 4%;
+  float: right;
+}
+
+.slider,
+.modal {
+  position: absolute;
+  display: block;
+}
+
+.slider {
+  text-align: center;
+  top: 70px;
+  margin: 0 auto;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
   background: antiquewhite;
   border: 1px solid darkgray;
 }
 
-.cat-img img {
-  width: 300px;
-  height: 200px;
-  border-radius: 16px 16px 0 0;
+[name="slider-button"] {
+  display: none;
 }
 
-.cat-name a {
-  text-decoration: none;
-  font-size: 24px;
+.cats {
+  width: 4000px;
+  transition: 1s;
 }
 
-.cat-name a:visited {
-  color: orange;
-}
-
-.cat-name a:hover {
-  color: red;
-}
-
-.cat {
-  border-radius: 16px;
-  width: 300px;
-  border: 2px solid darkgray;
-  display: inline-block;
-  margin: 15px;
-  background: white;
+.first-cat,
+.second-cat,
+.third-cat,
+.fourth-cat,
+.fifth-cat {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  opacity: .7;
+  margin-right: 65px;
+  margin-top: 50px;
+  float: left;
+  display: block;
 }
 
 .cat-name,
-.cat-description {
+.cat-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   display: block;
-  padding: 10px 15px;
-  font-size: 20px;
 }
 
-.cat-name {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.cat-full-description {
-  display: none;
-  margin-left: 15px;
-  font-size: 20px;
-}
-
-.cat:hover {
-  border-color: red;
-  transform: scale(1.3);
-}
-
-.cat-img:hover {
-  transition: 1s;
-  transform: scale(1.5);
-}
-
-.cat-description:hover,
-.cat-full-description:hover {
-  color: red;
-}
-
-.direction-input {
-  display: none;
-}
-
-.direction-button {
-  display: inline-block;
+.cat-image {
+  z-index: 2;
   cursor: pointer;
-  transform-origin: 50%;
-  transform: rotate(0deg);
 }
 
-.direction-part {
-  border: 3px solid black;
-  margin-right: 5px;
-  margin-top: 3px;
-  background: black;
+.cat-name,
+.modal-name {
+  font-weight: bold;
+  color: white;
+  font-size: 34px;
 }
 
-label[for='direction'] {
-  padding-left: 15px;
+.cat-name p {
+  margin: 50% auto;
+}
+
+.cat1:checked ~ .cats {
+  margin-left: 35%;
+}
+
+.cat2:checked ~ .cats {
+  margin-left: 0;
+}
+
+.cat3:checked ~ .cats {
+  margin-left: -34%;
+}
+
+.cat4:checked ~ .cats {
+  margin-left: -68%;
+}
+
+.cat5:checked ~ .cats {
+  margin-left: -103%;
+}
+
+.cat1:checked ~ .cats .first-cat,
+.cat2:checked ~ .cats .second-cat,
+.cat3:checked ~ .cats .third-cat,
+.cat4:checked ~ .cats .fourth-cat,
+.cat5:checked ~ .cats .fifth-cat {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.active label {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
   display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #bbb;
 }
 
-.direction-input:checked + label[for='direction'] .direction-button {
-  transform-origin: 50%;
-  transform: rotate(90deg);
+.active {
+  margin-top: 550px;
+  text-align: center;
 }
 
-.direction-input:checked ~ .cats .cat {
-  display: block;
-  width: 500px;
-  margin: 10px auto;
+.cat1:checked ~ .active label:nth-child(1),
+.cat2:checked ~ .active label:nth-child(2),
+.cat3:checked ~ .active label:nth-child(3),
+.cat4:checked ~ .active label:nth-child(4),
+.cat5:checked ~ .active label:nth-child(5) {
+  background: #18a3dd;
 }
 
-.direction-input:checked ~ .cats .cat .cat-img img {
-  margin: 5% 20%;
-  border-radius: 0;
+.cat1:checked ~ .cats .first-cat:hover .cat-name,
+.cat2:checked ~ .cats .second-cat:hover .cat-name,
+.cat3:checked ~ .cats .third-cat:hover .cat-name,
+.cat4:checked ~ .cats .fourth-cat:hover .cat-name,
+.cat5:checked ~ .cats .fifth-cat:hover .cat-name {
+  z-index: 3;
+  background: rgba(0, 0, 0, .5);
 }
 
-.direction-input:checked ~ .cats .cat .cat-full-description {
-  display: block;
-}
-
-.direction-input:checked ~ .cats .cat .cat-description {
+.modal {
+  width: 100%;
+  height: 100%;
   display: none;
+  pointer-events: none;
+}
+
+.modal:target {
+  z-index: 5;
+  display: block;
+  pointer-events: auto;
+  background: rgba(0, 0, 0, .9);
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  margin: 5% 31%;
+}
+
+.modal-image,
+.modal-description,
+.close {
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.modal-image {
+  width: 500px;
+  height: 500px;
+}
+
+.modal-description {
+  margin: 5% 5%;
+  width: 250px;
+  font-size: 22px;
+  color: white;
+}
+
+.close {
+  color: white;
+  text-align: center;
+  right: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 15px;
+  height: 15px;
 }
